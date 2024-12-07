@@ -1,0 +1,83 @@
+<style>
+	.pluginCardLink {
+		display: inline-block;
+		padding-top: 22px !important;
+		position: relative;
+		transform: translateY(-7px);
+		border-bottom-left-radius: 7px;
+		border-bottom-right-radius: 7px;
+	}
+
+	.pluginCardLink::before {
+		content: '';
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 7px;
+		border-top: .5px solid #1e3c72;
+	}
+</style>
+
+<script>
+	const lrnMoreUrls = {
+		'3d-viewer': 'https://bplugins.com/products/3d-viewer/',
+		'advance-custom-html': 'https://bplugins.com/products/advance-custom-html/',
+		'advanced-post-block': 'https://bplugins.com/products/advanced-post-block/',
+		'advanced-scrollbar': 'https://bplugins.com/products/advanced-scrollbar/',
+		'all-embed-addons-for-elementor': 'https://bplugins.com/products/all-embed-addons-for-elementor/',
+		'b-blocks': 'https://bblockswp.com/',
+		'b-carousel-block': 'https://bplugins.com/products/b-carousel-block/',
+		'b-carousel-block': 'https://bplugins.com/products/b-gallery/',
+		'b-slider': 'https://bplugins.com/products/b-slider/',
+		'b-timeline': 'https://bplugins.com/products/b-timeline/',
+		'business-review': 'https://bplugins.com/products/business-reviews',
+		'button-block': 'https://bplugins.com/products/button-block/',
+		'click-to-copy': 'https://bplugins.com/products/click-to-copy/',
+		'content-slider-block': 'https://bplugins.com/products/content-slider-block/',
+		'countdown-time': 'https://bplugins.com/products/countdown-time/',
+		'document-emberdder': 'https://bplugins.com/products/document-embedder/',
+		'document-embedder-addons-for-elementor': 'https://bplugins.com/products/document-embedder-addons-for-elementor/',
+		'embed-office-viewer': 'https://bplugins.com/products/document-viewer/',
+		'easy-twitter-feeds': 'https://bplugins.com/products/easy-twitter-feeds/',
+		'embed-github': 'https://bplugins.com/products/embed-github/',
+		'embed-google-photos': 'https://bplugins.com/products/embed-google-photos/',
+		'header-promo': 'https://bplugins.com/products/header-promo/',
+		'html5-audio-player': 'https://bplugins.com/products/html5-audio-player/',
+		'html5-video-player': 'https://bplugins.com/products/html5-video-player/',
+		'image-viewer': 'https://bplugins.com/products/image-viewer/',
+		'lightbox-block': 'https://bplugins.com/products/lightbox-block/',
+		'responsive-client-logo-carousel-slider': 'https://bplugins.com/products/logo-carousel/',
+		'embed-lottie-player': 'https://bplugins.com/products/lottie-player/',
+		'block-for-mailchimp': 'https://bplugins.com/products/mailchimp-block/',
+		'media-player-addons-for-elementor': 'https://bplugins.com/products/media-player-addons-for-elementor/',
+		'panorama': 'https://bplugins.com/products/panorama/',
+		'pdf-poster': 'https://bplugins.com/products/pdf-poster/',
+		'post-reaction': 'https://bplugins.com/products/post-reaction/',
+		'social-feed-block': 'https://bplugins.com/products/social-feed-block/',
+		'stepped-content': 'https://bplugins.com/products/stepped-content/',
+		'streamcast': 'https://bplugins.com/products/streamcast-radio-player/',
+		'super-video-player': 'https://bplugins.com/products/super-video-player/',
+		'swipe-n-buy': 'https://bplugins.com/products/swipe-n-buy/',
+		'tabbed-contents': 'https://bplugins.com/products/tabbed-contents-block/',
+		'b-tiktok-feed': 'https://bplugins.com/products/tiktok-feed/',
+		'video-gallery-for-youtube': 'https://bplugins.com/products/video-gallery-for-youtube/'
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		Object.keys(lrnMoreUrls).forEach(slug => {
+			const id = `wp-pic-${slug}`;
+			const cardEl = document.getElementById(id);
+
+			if (cardEl) {
+				const anchor = document.createElement('a');
+				anchor.href = lrnMoreUrls[slug];
+				anchor.target = '_blank';
+				anchor.innerText = 'Learn More';
+				anchor.className = 'pluginCardLink wp-pic-download';
+				cardEl.appendChild(anchor);
+
+				cardEl.style.paddingBottom = '48px';
+			}
+		});
+	});
+</script>
